@@ -1,10 +1,10 @@
 import puppeteer from 'puppeteer'
-import PythonService from '../services/pythonService';
+import PythonService from 'services/python.service';
 
 const TWITTER_BASE_URL = "https://twitter.com/search?q=%23";
 
 const PUPPETEER_CONFIG = {
-  headless: false,
+  headless: true,
   ignoreHTTPSErrors: true,
   userDataDir: './tmp',
   slowMo: 10,

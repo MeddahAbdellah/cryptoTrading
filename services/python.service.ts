@@ -2,7 +2,7 @@ import { spawn } from 'child_process';
 import path from 'path';
 
 const SCRIPT_COMMAND = `python`;
-const SCRIPT_BASE_PATH = `${path.dirname(require.main.filename)}\\python_scripts\\`;
+const SCRIPT_BASE_PATH = `${path.dirname(require.main.filename)}\\assets\\scrapers\\`;
 
 enum PYTHON_SCRIPTS {
   NLP = 'nlp_tweets.py',
