@@ -2,8 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import socketService from 'services/socket.serivce';
 import LoggerService from 'services/logger.service';
+import config from 'config';
 
-const PORT = 8080;
 const app = express();
 
 socketService.initializeSockets(app);
@@ -19,4 +19,4 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => res.send('Server is up!'));
 
-app.listen(PORT, () => LoggerService.log('Server Listening'));
+app.listen(config.port, () => LoggerService.log('Server Listening'));
